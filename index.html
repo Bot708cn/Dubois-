@@ -1,0 +1,2651 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Ets Dubois – Chauffage - Sanitaire | Liège</title>
+    <meta name="description" content="Spécialistes en chauffage et sanitaire à Liège : installation, entretien et dépannage. Plus de 20 ans d'expérience. Appelez le 04 343 25 59." />
+    <meta property="og:title" content="Ets Dubois – Chauffage - Sanitaire | Liège" />
+    <meta property="og:description" content="Votre confort, notre priorité. Spécialistes en chauffage et sanitaire : installation, entretien et dépannage à Liège." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Polices modernes & performantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet" />
+
+    <style>
+      /* ============================================================
+         DESIGN SYSTEM & VARIABLES - ETS DUBOIS CHAUFFAGE SANITAIRE
+         ============================================================ */
+      :root {
+        --color-bg: #030b1e;
+        --color-bg-alt: #071536;
+        --color-surface: #0a1b42;
+        --color-surface-hover: #10265c;
+        --color-card-border: rgba(255, 255, 255, 0.1);
+        
+        --color-primary: #0070f3;
+        --color-primary-hover: #005fd0;
+        --color-accent-blue: #2997ff;
+        
+        --color-call-red: #e11d48;
+        --color-call-red-hover: #be123c;
+        --color-call-red-glow: rgba(225, 29, 72, 0.4);
+
+        --color-gold: #f59e0b;
+        --color-text: #ffffff;
+        --color-text-muted: #94a3b8;
+        --color-text-subtle: #64748b;
+        
+        --radius-sm: 8px;
+        --radius-md: 14px;
+        --radius-lg: 20px;
+        --radius-pill: 9999px;
+
+        --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        --transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+        --header-height: 88px;
+      }
+
+      /* RESET & BASE */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html {
+        font-family: var(--font-family);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        scroll-behavior: smooth;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+        padding-bottom: 74px; /* Espace réservé pour le bouton mobile fixe en bas */
+      }
+
+      @media (min-width: 900px) {
+        body {
+          padding-bottom: 0;
+        }
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      button {
+        font-family: inherit;
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+
+      /* LAYOUT CONTAINERS */
+      .container {
+        width: 100%;
+        max-width: 1240px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+
+      /* ============================================================
+         HEADER CONFORME À LA MAQUETTE EXACTE
+         Transparent, flottant directement au-dessus du background
+         ============================================================ */
+      .site-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--header-height);
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(to bottom, rgba(3, 11, 30, 0.75) 0%, rgba(3, 11, 30, 0) 100%);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .header-left-zone {
+        display: flex;
+        align-items: center;
+      }
+
+      .brand-link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: var(--transition);
+      }
+
+      .brand-link:hover {
+        opacity: 0.95;
+      }
+
+      .brand-logo-img {
+        height: 52px;
+        width: auto;
+        object-fit: contain;
+      }
+
+      @media (max-width: 480px) {
+        .brand-logo-img {
+          height: 42px;
+        }
+      }
+
+      /* Séparateur vertical blanc entre le logo et le menu (comme dans la maquette) */
+      .header-divider {
+        display: none;
+        width: 1px;
+        height: 34px;
+        background: rgba(255, 255, 255, 0.4);
+        margin: 0 24px;
+      }
+
+      @media (min-width: 860px) {
+        .header-divider {
+          display: block;
+        }
+      }
+
+      /* Navigation Desktop avec indicateur bleu vif */
+      .nav-desktop {
+        display: none;
+        align-items: center;
+        gap: 32px;
+      }
+
+      @media (min-width: 860px) {
+        .nav-desktop {
+          display: flex;
+        }
+      }
+
+      .nav-item-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-link {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 4px 6px;
+        transition: var(--transition);
+        letter-spacing: -0.01em;
+      }
+
+      .nav-link.inactive {
+        color: #e2e8f0;
+        font-weight: 600;
+        opacity: 0.85;
+      }
+
+      .nav-link.inactive:hover {
+        opacity: 1;
+        color: #ffffff;
+      }
+
+      /* Barre bleue vive exactement sous « Accueil » */
+      .nav-active-bar {
+        width: 100%;
+        height: 3.5px;
+        background: var(--color-primary);
+        border-radius: 2px;
+        margin-top: 3px;
+        box-shadow: 0 2px 8px rgba(0, 112, 243, 0.5);
+      }
+
+      /* Bouton blanc supérieur droit avec flèche circulaire bleue */
+      .header-right-zone {
+        display: none;
+        align-items: center;
+      }
+
+      @media (min-width: 860px) {
+        .header-right-zone {
+          display: flex;
+        }
+      }
+
+      .btn-header-white {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: #ffffff;
+        color: #031435;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 10px 14px 10px 22px;
+        border-radius: var(--radius-pill);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+        transition: var(--transition);
+        white-space: nowrap;
+      }
+
+      .btn-header-white:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+        color: #000000;
+      }
+
+      .btn-header-arrow-circle {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: #0047ba;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      /* BURGER BUTTON (MOBILE) */
+      .burger-btn {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      @media (min-width: 860px) {
+        .burger-btn {
+          display: none;
+        }
+      }
+
+      .burger-line {
+        width: 22px;
+        height: 2.5px;
+        background: #ffffff;
+        border-radius: 2px;
+        transition: var(--transition);
+      }
+
+      .burger-btn.is-active .burger-line:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+      }
+      .burger-btn.is-active .burger-line:nth-child(2) {
+        opacity: 0;
+      }
+      .burger-btn.is-active .burger-line:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+      }
+
+      /* MOBILE MENU DRAWER */
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        background: rgba(3, 11, 30, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--color-card-border);
+        padding: 24px 20px 30px;
+        z-index: 99;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        animation: slideDown 0.25s ease-out;
+      }
+
+      .mobile-menu.is-open {
+        display: block;
+      }
+
+      @keyframes slideDown {
+        from {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .mobile-nav-link {
+        font-size: 19px;
+        font-weight: 700;
+        padding: 12px 16px;
+        border-radius: var(--radius-md);
+        color: #ffffff;
+        background: rgba(255, 255, 255, 0.05);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .mobile-nav-link.active {
+        background: rgba(0, 112, 243, 0.2);
+        border-left: 4px solid var(--color-accent-blue);
+        color: var(--color-accent-blue);
+      }
+
+      .mobile-menu-info {
+        padding-top: 18px;
+        border-top: 1px solid var(--color-card-border);
+        font-size: 14px;
+        color: var(--color-text-muted);
+      }
+
+      /* ============================================================
+         HERO SECTION - TECHNICIEN EN BACKGROUND & VERSION MOBILE
+         Background avec UNIQUEMENT l'image du technicien (zéro texte dans l'image)
+         ============================================================ */
+      .hero-section {
+        position: relative;
+        min-height: 660px;
+        padding-top: calc(var(--header-height) + 24px);
+        padding-bottom: 70px;
+        background-color: var(--color-bg);
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+      }
+
+      /* Image de fond du technicien sur Desktop (sans aucun texte) */
+      .hero-bg-technicien {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 58%;
+        background-image: url('./assets/aistudio/technicien_pur.jpg');
+        background-size: cover;
+        background-position: center right;
+        background-repeat: no-repeat;
+        z-index: 1;
+        pointer-events: none;
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 20%, black 45%);
+        mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.6) 20%, black 45%);
+      }
+
+      /* Voile subtil pour harmoniser les teintes sombres */
+      .hero-bg-technicien::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to right, #030b1e 0%, rgba(3, 11, 30, 0.4) 35%, rgba(3, 11, 30, 0) 70%);
+      }
+
+      @media (min-width: 900px) {
+        .hero-section {
+          min-height: 720px;
+          padding-top: calc(var(--header-height) + 40px);
+          padding-bottom: 80px;
+        }
+      }
+
+      @media (max-width: 899px) {
+        .hero-section {
+          min-height: auto;
+          padding-top: calc(var(--header-height) + 16px);
+          padding-bottom: 44px;
+          background-image: 
+            linear-gradient(to bottom, rgba(3, 11, 30, 0.92) 0%, rgba(3, 11, 30, 0.8) 40%, rgba(3, 11, 30, 0.94) 100%),
+            url('./assets/aistudio/technicien_pur.jpg');
+          background-size: cover;
+          background-position: center top;
+        }
+
+        .hero-bg-technicien {
+          display: none;
+        }
+      }
+
+      /* CARTE VISUELLE DU TECHNICIEN SUR MOBILE (Conforme à la maquette mobile) */
+      .hero-technician-mobile-card {
+        display: none;
+        margin: 22px 0 24px;
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 2px solid rgba(41, 151, 255, 0.35);
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 112, 243, 0.25);
+        position: relative;
+        background: var(--color-surface);
+      }
+
+      @media (max-width: 899px) {
+        .hero-technician-mobile-card {
+          display: block;
+        }
+      }
+
+      .hero-technician-mobile-img {
+        width: 100%;
+        height: auto;
+        max-height: 320px;
+        object-fit: cover;
+        object-position: center 25%;
+        display: block;
+      }
+
+      .hero-technician-mobile-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 14px;
+        background: linear-gradient(to top, rgba(3, 11, 30, 0.95) 0%, rgba(3, 11, 30, 0) 100%);
+        font-size: 13px;
+        font-weight: 700;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .status-dot-active {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #22c55e;
+        box-shadow: 0 0 8px #22c55e;
+        display: inline-block;
+        flex-shrink: 0;
+      }
+
+      /* Vagues décoratives bleues en bas du héro (exactement comme la maquette) */
+      .hero-waves-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        pointer-events: none;
+        z-index: 3;
+      }
+
+      .hero-waves-bottom svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+
+      .hero-content {
+        max-width: 680px;
+        position: relative;
+        z-index: 2;
+      }
+
+      /* Barre Kicker : ligne cyan + INSTALLATION • ENTRETIEN • DÉPANNAGE */
+      .hero-kicker-bar {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #ffffff;
+        margin-bottom: 18px;
+      }
+
+      .kicker-line {
+        display: inline-block;
+        width: 36px;
+        height: 3.5px;
+        background: var(--color-accent-blue);
+        border-radius: 2px;
+      }
+
+      .kicker-dot {
+        color: var(--color-accent-blue);
+      }
+
+      /* Grand Titre : Votre confort, notre priorité. (en italique cyan) */
+      .hero-title {
+        font-size: clamp(34px, 6vw, 60px);
+        font-weight: 800;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
+        color: #ffffff;
+        margin-bottom: 20px;
+        text-wrap: balance;
+      }
+
+      .highlight-blue-italic {
+        color: var(--color-accent-blue);
+        font-style: italic;
+        display: inline;
+      }
+
+      /* Sous-titre */
+      .hero-subtitle {
+        font-size: clamp(17px, 2.5vw, 19px);
+        font-weight: 500;
+        line-height: 1.5;
+        color: #e2e8f0;
+        margin-bottom: 32px;
+        max-width: 580px;
+      }
+
+      /* Groupe des deux gros boutons d'action */
+      .hero-cta-group {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-bottom: 36px;
+      }
+
+      @media (min-width: 600px) {
+        .hero-cta-group {
+          flex-direction: row;
+          align-items: center;
+        }
+      }
+
+      /* Bouton bleu : Contactez-nous */
+      .btn-hero-blue {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 54px;
+        padding: 12px 26px;
+        background: var(--color-primary);
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: var(--radius-pill);
+        box-shadow: 0 6px 20px rgba(0, 112, 243, 0.45);
+        transition: var(--transition);
+        text-align: center;
+      }
+
+      .btn-hero-blue:hover {
+        background: var(--color-primary-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 28px rgba(0, 112, 243, 0.6);
+      }
+
+      .btn-hero-arrow-circle {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: rgba(3, 20, 53, 0.4);
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      /* Bouton rouge : Appeler le 04 343 25 59 */
+      .btn-hero-red {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 54px;
+        padding: 12px 28px;
+        background: var(--color-call-red);
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        border-radius: var(--radius-pill);
+        box-shadow: 0 6px 22px var(--color-call-red-glow);
+        transition: var(--transition);
+        text-align: center;
+      }
+
+      .btn-hero-red:hover {
+        background: var(--color-call-red-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(225, 29, 72, 0.6);
+      }
+
+      .btn-red-pulse {
+        animation: pulseRed 2.4s infinite;
+      }
+
+      @keyframes pulseRed {
+        0%, 100% {
+          box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.5);
+        }
+        50% {
+          box-shadow: 0 0 0 10px rgba(225, 29, 72, 0);
+        }
+      }
+
+      /* 3 Piliers de confiance avec icônes et séparateurs verticaux */
+      .hero-features-strip {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 14px;
+      }
+
+      @media (min-width: 640px) {
+        .hero-features-strip {
+          gap: 28px;
+        }
+      }
+
+      .feat-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .feat-icon-box {
+        width: 38px;
+        height: 38px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .feat-text {
+        font-size: 14px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.25;
+      }
+
+      .feat-divider {
+        display: none;
+        width: 1px;
+        height: 32px;
+        background: rgba(255, 255, 255, 0.35);
+      }
+
+      @media (min-width: 580px) {
+        .feat-divider {
+          display: block;
+        }
+      }
+
+      /* ============================================================
+         BANDE DE CONFIANCE (TRUST BAR)
+         ============================================================ */
+      .trust-strip {
+        background: var(--color-bg-alt);
+        border-top: 1px solid var(--color-card-border);
+        border-bottom: 1px solid var(--color-card-border);
+        padding: 24px 0;
+      }
+
+      .trust-strip-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 18px;
+        align-items: center;
+      }
+
+      @media (min-width: 720px) {
+        .trust-strip-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+      }
+
+      .trust-strip-card {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: rgba(255, 255, 255, 0.03);
+        padding: 14px 18px;
+        border-radius: var(--radius-md);
+        border: 1px solid var(--color-card-border);
+      }
+
+      .trust-card-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(0, 112, 243, 0.18);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-accent-blue);
+        flex-shrink: 0;
+      }
+
+      .trust-card-icon.gold {
+        background: rgba(245, 158, 11, 0.18);
+        color: var(--color-gold);
+      }
+
+      .trust-card-content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .trust-card-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #ffffff;
+      }
+
+      .trust-card-desc {
+        font-size: 13px;
+        color: var(--color-text-muted);
+      }
+
+      .stars-row {
+        display: inline-flex;
+        align-items: center;
+        gap: 2px;
+        color: var(--color-gold);
+      }
+
+      /* ============================================================
+         SERVICES SECTION (MAX 6 CARDS)
+         ============================================================ */
+      .section {
+        padding: 56px 0;
+      }
+
+      @media (min-width: 900px) {
+        .section {
+          padding: 80px 0;
+        }
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 40px;
+      }
+
+      .section-kicker {
+        font-size: 13px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        color: var(--color-accent-blue);
+        margin-bottom: 8px;
+      }
+
+      .section-title {
+        font-size: clamp(26px, 5vw, 38px);
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 14px;
+        letter-spacing: -0.02em;
+      }
+
+      .section-desc {
+        font-size: 16px;
+        color: var(--color-text-muted);
+        line-height: 1.55;
+      }
+
+      .services-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      @media (min-width: 680px) {
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 1040px) {
+        .services-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 24px;
+        }
+      }
+
+      .service-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-card-border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: var(--transition);
+      }
+
+      .service-card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(0, 112, 243, 0.4);
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+      }
+
+      .service-card-media {
+        position: relative;
+        width: 100%;
+        height: 180px;
+        background: #0a142e;
+        overflow: hidden;
+      }
+
+      .service-card-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .service-card:hover .service-card-img {
+        transform: scale(1.05);
+      }
+
+      .service-icon-badge {
+        position: absolute;
+        top: 14px;
+        right: 14px;
+        width: 44px;
+        height: 44px;
+        background: rgba(3, 11, 30, 0.85);
+        backdrop-filter: blur(8px);
+        border-radius: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--color-accent-blue);
+      }
+
+      .service-card-body {
+        padding: 22px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .service-card-title {
+        font-size: 19px;
+        font-weight: 800;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      .service-card-text {
+        font-size: 15px;
+        color: #cbd5e1;
+        line-height: 1.5;
+        margin-bottom: 18px;
+        flex-grow: 1;
+      }
+
+      .service-card-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--color-accent-blue);
+        transition: var(--transition);
+      }
+
+      .service-card-link:hover {
+        gap: 10px;
+        color: #ffffff;
+      }
+
+      /* ============================================================
+         POURQUOI NOUS CHOISIR (3 VRAIS POINTS)
+         ============================================================ */
+      .why-us-section {
+        background: var(--color-bg-alt);
+        border-top: 1px solid var(--color-card-border);
+        border-bottom: 1px solid var(--color-card-border);
+      }
+
+      .why-us-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      @media (min-width: 820px) {
+        .why-us-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 26px;
+        }
+      }
+
+      .why-us-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-card-border);
+        border-radius: var(--radius-lg);
+        padding: 28px 24px;
+        position: relative;
+        transition: var(--transition);
+      }
+
+      .why-us-card:hover {
+        border-color: rgba(0, 112, 243, 0.4);
+        transform: translateY(-3px);
+      }
+
+      .why-us-number {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        color: var(--color-accent-blue);
+        background: rgba(0, 112, 243, 0.15);
+        padding: 4px 10px;
+        border-radius: var(--radius-pill);
+        margin-bottom: 16px;
+      }
+
+      .why-us-title {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 12px;
+        color: #ffffff;
+      }
+
+      .why-us-desc {
+        font-size: 15px;
+        color: #cbd5e1;
+        line-height: 1.55;
+      }
+
+      /* ============================================================
+         GALERIE PHOTO (LES 6 IMAGES JOINTES)
+         ============================================================ */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      @media (min-width: 520px) {
+        .gallery-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (min-width: 900px) {
+        .gallery-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--color-card-border);
+        background: var(--color-surface);
+        aspect-ratio: 4 / 3;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-4px);
+        border-color: rgba(0, 112, 243, 0.4);
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+      }
+
+      .gallery-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+      }
+
+      .gallery-item:hover .gallery-img {
+        transform: scale(1.05);
+      }
+
+      .gallery-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(to top, rgba(3, 11, 30, 0.92) 0%, rgba(3, 11, 30, 0.2) 60%, transparent 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 16px;
+        opacity: 0.9;
+        transition: var(--transition);
+      }
+
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+
+      .gallery-caption {
+        font-size: 14px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.35;
+      }
+
+      .gallery-zoom-hint {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 12px;
+        color: var(--color-accent-blue);
+        margin-top: 4px;
+        font-weight: 600;
+      }
+
+      /* LIGHTBOX MODAL */
+      .lightbox-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.92);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 1000;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .lightbox-modal.is-open {
+        display: flex;
+      }
+
+      .lightbox-inner {
+        position: relative;
+        max-width: 900px;
+        width: 100%;
+        background: var(--color-bg);
+        border: 1px solid var(--color-card-border);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
+
+      .lightbox-image {
+        width: 100%;
+        max-height: 70vh;
+        object-fit: contain;
+        background: #000;
+      }
+
+      .lightbox-caption-bar {
+        padding: 16px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: var(--color-surface);
+      }
+
+      .lightbox-close-btn {
+        width: 44px;
+        height: 44px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        cursor: pointer;
+        border: none;
+      }
+
+      /* ============================================================
+         BLOC CONTACT RAPIDE & GOOGLE MAPS
+         ============================================================ */
+      .quick-contact-section {
+        background: var(--color-bg-alt);
+        border-top: 1px solid var(--color-card-border);
+      }
+
+      .quick-contact-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      @media (min-width: 900px) {
+        .quick-contact-grid {
+          grid-template-columns: 1fr 1fr;
+          gap: 36px;
+        }
+      }
+
+      .contact-info-list {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 24px;
+      }
+
+      .info-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-card-border);
+        border-radius: var(--radius-md);
+        padding: 18px 20px;
+        display: flex;
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .info-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: var(--radius-sm);
+        background: rgba(0, 112, 243, 0.15);
+        color: var(--color-accent-blue);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .info-label {
+        font-size: 13px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--color-text-muted);
+        margin-bottom: 4px;
+      }
+
+      .info-value {
+        font-size: 17px;
+        font-weight: 700;
+        color: #ffffff;
+        line-height: 1.4;
+      }
+
+      .info-link {
+        color: #ffffff;
+        transition: var(--transition);
+      }
+
+      .info-link:hover {
+        color: var(--color-accent-blue);
+        text-decoration: underline;
+      }
+
+      .map-wrapper {
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--color-card-border);
+        height: 100%;
+        min-height: 320px;
+        background: var(--color-surface);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+
+      .map-iframe {
+        width: 100%;
+        height: 100%;
+        min-height: 320px;
+        border: 0;
+      }
+
+      /* ============================================================
+         PAGE CONTACT (VUE COMPLÈTE)
+         ============================================================ */
+      .page-view {
+        display: none;
+      }
+
+      .page-view.active-view {
+        display: block;
+      }
+
+      .contact-page-header {
+        text-align: center;
+        padding: calc(var(--header-height) + 30px) 0 24px;
+      }
+
+      .contact-page-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 48px;
+      }
+
+      @media (min-width: 900px) {
+        .contact-page-grid {
+          grid-template-columns: 1.15fr 0.85fr;
+          gap: 40px;
+        }
+      }
+
+      .contact-form-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-card-border);
+        border-radius: var(--radius-lg);
+        padding: 26px 20px;
+      }
+
+      @media (min-width: 500px) {
+        .contact-form-card {
+          padding: 34px 28px;
+        }
+      }
+
+      .form-title {
+        font-size: 24px;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+
+      .form-subtitle {
+        font-size: 15px;
+        color: var(--color-text-muted);
+        margin-bottom: 24px;
+      }
+
+      .form-group {
+        margin-bottom: 18px;
+      }
+
+      .form-label {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        color: #ffffff;
+        margin-bottom: 8px;
+      }
+
+      .form-input, .form-textarea {
+        width: 100%;
+        background: rgba(3, 11, 30, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: var(--radius-md);
+        padding: 14px 16px;
+        font-size: 16px;
+        color: #ffffff;
+        font-family: inherit;
+        transition: var(--transition);
+      }
+
+      .form-input:focus, .form-textarea:focus {
+        outline: none;
+        border-color: var(--color-accent-blue);
+        box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.25);
+      }
+
+      .form-textarea {
+        resize: vertical;
+        min-height: 130px;
+      }
+
+      .form-error {
+        color: #f87171;
+        font-size: 13px;
+        font-weight: 600;
+        margin-top: 6px;
+        display: none;
+      }
+
+      .form-feedback {
+        display: none;
+        padding: 16px;
+        border-radius: var(--radius-md);
+        margin-bottom: 20px;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .form-feedback.success {
+        background: rgba(16, 185, 129, 0.15);
+        border: 1px solid rgba(16, 185, 129, 0.4);
+        color: #34d399;
+        display: block;
+      }
+
+      .contact-side-card {
+        background: var(--color-bg-alt);
+        border: 1px solid var(--color-card-border);
+        border-radius: var(--radius-lg);
+        padding: 26px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      /* ============================================================
+         FOOTER
+         ============================================================ */
+      .site-footer {
+        background: #020713;
+        border-top: 1px solid var(--color-card-border);
+        padding: 48px 0 28px;
+        color: var(--color-text-muted);
+        font-size: 14px;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 32px;
+        margin-bottom: 36px;
+      }
+
+      @media (min-width: 760px) {
+        .footer-grid {
+          grid-template-columns: 1.5fr 1fr 1fr;
+          gap: 40px;
+        }
+      }
+
+      .footer-brand {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .footer-title {
+        font-size: 16px;
+        font-weight: 800;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 12px;
+      }
+
+      .footer-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .footer-link {
+        color: var(--color-text-muted);
+        transition: var(--transition);
+      }
+
+      .footer-link:hover {
+        color: #ffffff;
+      }
+
+      .footer-bottom {
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      @media (min-width: 680px) {
+        .footer-bottom {
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
+        }
+      }
+
+      .footer-legal {
+        font-size: 13px;
+        color: #94a3b8;
+      }
+
+      .footer-credit {
+        font-size: 12px;
+        color: #94a3b8;
+      }
+
+      /* ============================================================
+         BOUTON MOBILE FLOTTANT ROUGE « APPELER » (TOUJOURS VISIBLE)
+         ============================================================ */
+      .mobile-sticky-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 10px 16px;
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+        background: rgba(3, 11, 30, 0.95);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        z-index: 999;
+        display: flex;
+        box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      @media (min-width: 900px) {
+        .mobile-sticky-bar {
+          display: none;
+        }
+      }
+
+      .mobile-call-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+        min-height: 50px;
+        background: var(--color-call-red);
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 800;
+        border-radius: var(--radius-pill);
+        box-shadow: 0 4px 18px var(--color-call-red-glow);
+        text-decoration: none;
+        letter-spacing: -0.01em;
+      }
+
+      .mobile-call-btn:active {
+        transform: scale(0.98);
+        background: var(--color-call-red-hover);
+      }
+
+      .phone-icon-animated {
+        animation: ringPhone 2s infinite ease-in-out;
+      }
+
+      @keyframes ringPhone {
+        0%, 100% { transform: rotate(0deg); }
+        10%, 30% { transform: rotate(-15deg); }
+        20%, 40% { transform: rotate(15deg); }
+        50% { transform: rotate(0deg); }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ============================================================
+         HEADER DU SITE (EXACTEMENT COMME LA MAQUETTE)
+         Transparent, flottant directement au-dessus de l'image de fond
+         ============================================================ -->
+    <header class="site-header" role="banner">
+      <div class="container">
+        <div class="header-inner">
+          
+          <!-- Logo & Navigation à gauche -->
+          <div class="header-left-zone">
+            <!-- Logo officiel Ets Dubois Chauffage - Sanitaire -->
+            <a href="#accueil" class="brand-link" onclick="navigateTo('accueil'); return false;" aria-label="Ets Dubois Accueil">
+              <img 
+                src="./assets/aistudio/Logo_Version_finale_1200_89468336.png" 
+                alt="Logo Ets Dubois Chauffage Sanitaire Liège" 
+                class="brand-logo-img"
+              />
+            </a>
+
+            <!-- Séparateur vertical blanc | -->
+            <div class="header-divider" aria-hidden="true"></div>
+
+            <!-- Liens de navigation Desktop -->
+            <nav class="nav-desktop" aria-label="Navigation principale">
+              <div class="nav-item-wrapper">
+                <a href="#accueil" class="nav-link" id="nav-desktop-accueil" onclick="navigateTo('accueil'); return false;">Accueil</a>
+                <div class="nav-active-bar" id="nav-bar-accueil"></div>
+              </div>
+              <div class="nav-item-wrapper">
+                <a href="#contact" class="nav-link inactive" id="nav-desktop-contact" onclick="navigateTo('contact'); return false;">Contact</a>
+                <div class="nav-active-bar" id="nav-bar-contact" style="display: none;"></div>
+              </div>
+            </nav>
+          </div>
+
+          <!-- Bouton Blanc supérieur droit avec flèche circulaire bleue -->
+          <div class="header-right-zone">
+            <a href="#contact" class="btn-header-white" onclick="navigateTo('contact'); return false;">
+              <span>Contactez-nous</span>
+              <span class="btn-header-arrow-circle" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </a>
+          </div>
+
+          <!-- Burger Menu Mobile -->
+          <button class="burger-btn" id="burger-btn" aria-label="Ouvrir le menu de navigation" aria-expanded="false" onclick="toggleMobileMenu()">
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+            <span class="burger-line"></span>
+          </button>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- MENU MOBILE FLOTTANT -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-nav-links">
+        <a href="#accueil" class="mobile-nav-link active" id="nav-mobile-accueil" onclick="navigateTo('accueil'); toggleMobileMenu(false); return false;">
+          <span>Accueil</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+        <a href="#contact" class="mobile-nav-link" id="nav-mobile-contact" onclick="navigateTo('contact'); toggleMobileMenu(false); return false;">
+          <span>Contact</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+      <div class="mobile-menu-info">
+        <p><strong>Ets Dubois – Chauffage - Sanitaire</strong></p>
+        <p>Rue de Mulhouse 8-10, 4020 Liège</p>
+        <p>Lun - Ven : 08h00–16h30 (fermé le week-end)</p>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         PAGE 1 : ACCUEIL
+         ============================================================ -->
+    <main id="view-accueil" class="page-view active-view" role="main">
+
+      <!-- SECTION HÉROS (AVEC IMAGE DU TECHNICIEN EN BACKGROUND ET SUR MOBILE) -->
+      <section class="hero-section" aria-label="Présentation et urgence dépannage">
+        
+        <!-- Image de fond du technicien sur grand écran (zéro texte dans l'image) -->
+        <div class="hero-bg-technicien" aria-hidden="true"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+          <div class="hero-content">
+            
+            <!-- Kicker : Ligne cyan + INSTALLATION • ENTRETIEN • DÉPANNAGE -->
+            <div class="hero-kicker-bar">
+              <span class="kicker-line" aria-hidden="true"></span>
+              <span>INSTALLATION</span>
+              <span class="kicker-dot">•</span>
+              <span>ENTRETIEN</span>
+              <span class="kicker-dot">•</span>
+              <span>DÉPANNAGE</span>
+            </div>
+
+            <!-- Titre Principal : Votre confort, notre priorité. -->
+            <h1 class="hero-title">
+              Votre confort,<br />
+              <span class="highlight-blue-italic">notre priorité.</span>
+            </h1>
+
+            <!-- Sous-titre exact -->
+            <p class="hero-subtitle">
+              Spécialistes en chauffage et sanitaire, nous vous accompagnons pour tous vos projets : installation, entretien et dépannage.
+            </p>
+
+            <!-- Deux gros boutons d'action côte-à-côte (et empilés sur mobile) -->
+            <div class="hero-cta-group">
+              
+              <!-- Bouton Bleu avec cercle de flèche -->
+              <a href="#contact" class="btn-hero-blue" onclick="navigateTo('contact'); return false;">
+                <span>Contactez-nous</span>
+                <span class="btn-hero-arrow-circle" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+
+              <!-- Bouton Rouge avec icône téléphone -->
+              <a href="tel:+3243432559" class="btn-hero-red btn-red-pulse" aria-label="Appeler le 04 343 25 59">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>Appeler le 04 343 25 59</span>
+              </a>
+
+            </div>
+
+            <!-- CARTE DU TECHNICIEN VISIBLE SUR MOBILE (conforme à la maquette mobile) -->
+            <div class="hero-technician-mobile-card">
+              <img 
+                src="./assets/aistudio/technicien_pur.jpg" 
+                alt="Technicien chauffagiste Ets Dubois en intervention sur chaudière" 
+                class="hero-technician-mobile-img"
+                loading="eager"
+              />
+              <div class="hero-technician-mobile-caption">
+                <span class="status-dot-active" aria-hidden="true"></span>
+                <span>Chauffagiste qualifié en intervention à Liège</span>
+              </div>
+            </div>
+
+            <!-- 3 Piliers de confiance avec icônes et séparateurs verticaux -->
+            <div class="hero-features-strip">
+              
+              <!-- 1. Installation professionnelle -->
+              <div class="feat-item">
+                <div class="feat-icon-box" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div class="feat-text">
+                  Installation<br />professionnelle
+                </div>
+              </div>
+
+              <!-- Séparateur vertical | -->
+              <div class="feat-divider" aria-hidden="true"></div>
+
+              <!-- 2. Entretien régulier -->
+              <div class="feat-item">
+                <div class="feat-icon-box" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div class="feat-text">
+                  Entretien<br />régulier
+                </div>
+              </div>
+
+              <!-- Séparateur vertical | -->
+              <div class="feat-divider" aria-hidden="true"></div>
+
+              <!-- 3. Dépannage rapide -->
+              <div class="feat-item">
+                <div class="feat-icon-box" aria-hidden="true">
+                  <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <div class="feat-text">
+                  Dépannage<br />rapide
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Vagues décoratives bleues en bas du héro -->
+        <div class="hero-waves-bottom" aria-hidden="true">
+          <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+            <path d="M0,32 C320,55 480,12 800,38 C1120,64 1280,18 1440,30 L1440,60 L0,60 Z" fill="rgba(0, 112, 243, 0.25)"/>
+            <path d="M0,42 C360,18 640,58 980,30 C1200,12 1340,42 1440,38 L1440,60 L0,60 Z" fill="#071536"/>
+          </svg>
+        </div>
+
+      </section>
+
+      <!-- BANDE DE CONFIANCE -->
+      <section class="trust-strip" aria-label="Garanties et avis clients">
+        <div class="container">
+          <div class="trust-strip-grid">
+            
+            <!-- Point 1 : Expérience -->
+            <div class="trust-strip-card">
+              <div class="trust-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div class="trust-card-content">
+                <div class="trust-card-title">Plus de 20 ans d'expérience</div>
+                <div class="trust-card-desc">Savoir-faire artisanal éprouvé à Liège</div>
+              </div>
+            </div>
+
+            <!-- Point 2 : Note Google sobre (4,1/5 - 18 avis) -->
+            <div class="trust-strip-card">
+              <div class="trust-card-icon gold" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+              </div>
+              <div class="trust-card-content">
+                <div class="trust-card-title">Note Google 4,1/5</div>
+                <div class="trust-card-desc">
+                  <span class="stars-row" aria-label="Note de 4,1 sur 5">★★★★☆</span>
+                  <span style="margin-left: 4px;">(18 avis)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Point 3 : Zone d'intervention -->
+            <div class="trust-strip-card">
+              <div class="trust-card-icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div class="trust-card-content">
+                <div class="trust-card-title">Liège et environs</div>
+                <div class="trust-card-desc">Interventions et dépannages locaux</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION SERVICES (6 MAXIMUM) -->
+      <section class="section" id="services" aria-labelledby="services-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Nos Prestations</div>
+            <h2 id="services-title" class="section-title">Services en chauffage et sanitaire</h2>
+            <p class="section-desc">
+              Une gamme complète de solutions fiables et durables pour garantir votre confort au quotidien.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            
+            <!-- Service 1 : Dépannage -->
+            <article class="service-card">
+              <div class="service-card-media">
+                <img 
+                  src="./assets/aistudio/IMG_20261103_104219_7332a8be.jpg" 
+                  alt="Dépannage d'urgence sur installation de chauffage par Ets Dubois" 
+                  class="service-card-img"
+                  loading="lazy"
+                />
+                <div class="service-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Dépannage</h3>
+                <p class="service-card-text">
+                  Intervention rapide en cas de panne de chauffage, coupure d'eau chaude, fuite ou anomalie sur vos équipements.
+                </p>
+                <a href="tel:+3243432559" class="service-card-link">
+                  <span>Demander un dépannage</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 2 : Entretien -->
+            <article class="service-card">
+              <div class="service-card-media">
+                <img 
+                  src="./assets/aistudio/gros-plan-dun-plombier-utilisant-un-tournevis-lors-de-la-fixation-dune-chaudi_re-ou-dun_1f07cc37.jpg" 
+                  alt="Entretien méthodique d'une chaudière murale par un technicien" 
+                  class="service-card-img"
+                  loading="lazy"
+                />
+                <div class="service-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Entretien</h3>
+                <p class="service-card-text">
+                  Entretien régulier de vos chaudières gaz et mazout pour optimiser leur rendement, réduire votre consommation et assurer votre sécurité.
+                </p>
+                <a href="#contact" class="service-card-link" onclick="navigateTo('contact'); return false;">
+                  <span>Planifier un entretien</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 3 : Chauffage gaz et mazout -->
+            <article class="service-card">
+              <div class="service-card-media">
+                <img 
+                  src="./assets/aistudio/installation-chaudiere-768x0-c-default_d66bf406.jpg" 
+                  alt="Installation et réglage de chaudière gaz et mazout" 
+                  class="service-card-img"
+                  loading="lazy"
+                />
+                <div class="service-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Chauffage gaz et mazout</h3>
+                <p class="service-card-text">
+                  Installation, remplacement et réglage précis de chaudières modernes à haut rendement gaz et mazout adaptées à votre habitation.
+                </p>
+                <a href="#contact" class="service-card-link" onclick="navigateTo('contact'); return false;">
+                  <span>Demander une étude</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 4 : Chauffage au sol -->
+            <article class="service-card">
+              <div class="service-card-media">
+                <img 
+                  src="./assets/aistudio/IMG_20261103_104206_5a14e9dc.jpg" 
+                  alt="Collecteurs et régulation de chauffage au sol" 
+                  class="service-card-img"
+                  loading="lazy"
+                />
+                <div class="service-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20M2 6h20M2 18h20"/></svg>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Chauffage au sol</h3>
+                <p class="service-card-text">
+                  Conception et mise en place de systèmes de chauffage par le sol basse température offrant une chaleur douce et homogène.
+                </p>
+                <a href="#contact" class="service-card-link" onclick="navigateTo('contact'); return false;">
+                  <span>En savoir plus</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 5 : Pompe à chaleur & chauffe-eau -->
+            <article class="service-card">
+              <div class="service-card-media">
+                <img 
+                  src="./assets/aistudio/ebouage-desembouage-detartrage_ad541219.jpg" 
+                  alt="Pompe à chaleur, chauffe-eau et ballon de stockage" 
+                  class="service-card-img"
+                  loading="lazy"
+                />
+                <div class="service-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Pompe à chaleur &amp; chauffe-eau</h3>
+                <p class="service-card-text">
+                  Installation de pompes à chaleur, réparation d'anciens poêles et chauffe-eau pour garantir votre approvisionnement en eau chaude.
+                </p>
+                <a href="#contact" class="service-card-link" onclick="navigateTo('contact'); return false;">
+                  <span>Demander un conseil</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <!-- Service 6 : Vente de matériel & Rénovation -->
+            <article class="service-card">
+              <div class="service-card-media">
+                <img 
+                  src="./assets/aistudio/image00010_ff0ce367.jpg" 
+                  alt="Chaufferie moderne et rénovation sanitaire complète" 
+                  class="service-card-img"
+                  loading="lazy"
+                />
+                <div class="service-icon-badge" aria-hidden="true">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                </div>
+              </div>
+              <div class="service-card-body">
+                <h3 class="service-card-title">Vente de matériel &amp; Rénovation</h3>
+                <p class="service-card-text">
+                  Vente de matériel certifié et travaux de rénovation de vos installations sanitaires et tuyauteries avec finition soignée.
+                </p>
+                <a href="#contact" class="service-card-link" onclick="navigateTo('contact'); return false;">
+                  <span>Consulter nos disponibilités</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION POURQUOI NOUS CHOISIR (3 POINTS COURTS ET VRAIS) -->
+      <section class="section why-us-section" aria-labelledby="why-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Confiance &amp; Rigueur</div>
+            <h2 id="why-title" class="section-title">Pourquoi nous choisir</h2>
+            <p class="section-desc">
+              Trois engagements réels qui font notre réputation auprès des ménages et professionnels de la région liégeoise.
+            </p>
+          </div>
+
+          <div class="why-us-grid">
+            
+            <!-- Point 1 -->
+            <div class="why-us-card">
+              <div class="why-us-number">01</div>
+              <h3 class="why-us-title">Plus de 20 ans d'expérience</h3>
+              <p class="why-us-desc">
+                Une solide expertise technique acquise sur le terrain depuis plus de deux décennies, garantissant un diagnostic précis et des solutions durables.
+              </p>
+            </div>
+
+            <!-- Point 2 -->
+            <div class="why-us-card">
+              <div class="why-us-number">02</div>
+              <h3 class="why-us-title">Dépannage réactif</h3>
+              <p class="why-us-desc">
+                Disponibilité directe par téléphone pour répondre sans délai à vos urgences de chauffage et sanitaire à Liège et dans les communes voisines.
+              </p>
+            </div>
+
+            <!-- Point 3 -->
+            <div class="why-us-card">
+              <div class="why-us-number">03</div>
+              <h3 class="why-us-title">Devis sur demande</h3>
+              <p class="why-us-desc">
+                Transparence totale : nous établissons un devis clair et détaillé sur demande avant toute intervention d'envergure, sans surprise.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- GALERIE DES PHOTOS JOINTES -->
+      <section class="section" id="galerie" aria-labelledby="gallery-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Nos Réalisations</div>
+            <h2 id="gallery-title" class="section-title">Nos interventions en images</h2>
+            <p class="section-desc">
+              Découvrez la qualité de nos installations et dépannages réalisés avec rigueur à Liège. Cliquez sur une photo pour l'agrandir.
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            
+            <!-- Image 1 -->
+            <div class="gallery-item" onclick="openLightbox('./assets/aistudio/installation-chaudiere-768x0-c-default_d66bf406.jpg', 'Réglage et mise en service d\'un chauffe-eau par notre chauffagiste')">
+              <img 
+                src="./assets/aistudio/installation-chaudiere-768x0-c-default_d66bf406.jpg" 
+                alt="Réglage et mise en service d'un chauffe-eau par notre chauffagiste" 
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">Réglage et mise en service d'un chauffe-eau</div>
+                <div class="gallery-zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Agrandir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="gallery-item" onclick="openLightbox('./assets/aistudio/gros-plan-dun-plombier-utilisant-un-tournevis-lors-de-la-fixation-dune-chaudi_re-ou-dun_1f07cc37.jpg', 'Entretien technique et vérification des raccordements d\'une chaudière murale')">
+              <img 
+                src="./assets/aistudio/gros-plan-dun-plombier-utilisant-un-tournevis-lors-de-la-fixation-dune-chaudi_re-ou-dun_1f07cc37.jpg" 
+                alt="Entretien technique et vérification des raccordements d'une chaudière murale" 
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">Entretien technique d'une chaudière murale</div>
+                <div class="gallery-zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Agrandir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="gallery-item" onclick="openLightbox('./assets/aistudio/ebouage-desembouage-detartrage_ad541219.jpg', 'Contrôle technique et relevé des pressions en chaufferie centrale')">
+              <img 
+                src="./assets/aistudio/ebouage-desembouage-detartrage_ad541219.jpg" 
+                alt="Contrôle technique et relevé des pressions en chaufferie centrale" 
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">Contrôle de conformité en chaufferie</div>
+                <div class="gallery-zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Agrandir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="gallery-item" onclick="openLightbox('./assets/aistudio/IMG_20261103_104206_5a14e9dc.jpg', 'Serrage et ajustement des vannes thermostatiques et tuyauteries de chauffage')">
+              <img 
+                src="./assets/aistudio/IMG_20261103_104206_5a14e9dc.jpg" 
+                alt="Serrage et ajustement des vannes thermostatiques et tuyauteries de chauffage" 
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">Ajustement précis des tuyauteries de chauffage</div>
+                <div class="gallery-zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Agrandir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="gallery-item" onclick="openLightbox('./assets/aistudio/image00010_ff0ce367.jpg', 'Installation complète de chaudière et circuit de distribution sanitaire')">
+              <img 
+                src="./assets/aistudio/image00010_ff0ce367.jpg" 
+                alt="Installation complète de chaudière et circuit de distribution sanitaire" 
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">Installation complète de chaufferie murale</div>
+                <div class="gallery-zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Agrandir</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="gallery-item" onclick="openLightbox('./assets/aistudio/IMG_20261103_104219_7332a8be.jpg', 'Intervention de dépannage et raccordement hydraulique sur chaudière')">
+              <img 
+                src="./assets/aistudio/IMG_20261103_104219_7332a8be.jpg" 
+                alt="Intervention de dépannage et raccordement hydraulique sur chaudière" 
+                class="gallery-img"
+                loading="lazy"
+              />
+              <div class="gallery-overlay">
+                <div class="gallery-caption">Raccordement et dépannage hydraulique</div>
+                <div class="gallery-zoom-hint">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg>
+                  <span>Agrandir</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOC CONTACT RAPIDE & GOOGLE MAPS -->
+      <section class="section quick-contact-section" aria-labelledby="quick-contact-title">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Disponibilité Immédiate</div>
+            <h2 id="quick-contact-title" class="section-title">Nous contacter rapidement</h2>
+            <p class="section-desc">
+              Basés à Liège, nous intervenons rapidement pour sécuriser vos équipements et rétablir votre confort.
+            </p>
+          </div>
+
+          <div class="quick-contact-grid">
+            
+            <!-- Informations Directes -->
+            <div style="display: flex; flex-direction: column; justify-content: center;">
+              <div class="contact-info-list">
+                
+                <!-- Téléphone -->
+                <div class="info-card">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  </div>
+                  <div>
+                    <div class="info-label">Téléphone direct</div>
+                    <div class="info-value">
+                      <a href="tel:+3243432559" class="info-link">+32 4 343 25 59</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Adresse -->
+                <div class="info-card">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                  </div>
+                  <div>
+                    <div class="info-label">Adresse</div>
+                    <div class="info-value">
+                      Rue de Mulhouse 8-10,<br />4020 Liège, Belgique
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Horaires -->
+                <div class="info-card">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                  </div>
+                  <div>
+                    <div class="info-label">Heures d'ouverture</div>
+                    <div class="info-value">
+                      Lundi au vendredi : 08h00–16h30<br />
+                      <span style="color: var(--color-text-muted); font-size: 15px; font-weight: 500;">Fermé le week-end</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- E-mail -->
+                <div class="info-card">
+                  <div class="info-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  </div>
+                  <div>
+                    <div class="info-label">E-mail</div>
+                    <div class="info-value">
+                      <a href="mailto:etablissement.dubois@gmail.com" class="info-link">etablissement.dubois@gmail.com</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Bouton pour basculer sur la page de contact complète -->
+              <a href="#contact" class="btn-hero-blue" style="width: auto; justify-content: flex-start; padding: 14px 28px;" onclick="navigateTo('contact'); return false;">
+                <span>Accéder au formulaire de contact</span>
+                <span class="btn-hero-arrow-circle" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- Carte Google Maps Intégrée -->
+            <div class="map-wrapper">
+              <iframe 
+                class="map-iframe"
+                title="Localisation Ets Dubois Chauffage Sanitaire Rue de Mulhouse 8-10, 4020 Liège"
+                src="https://maps.google.com/maps?q=Rue+de+Mulhouse+8-10,+4020+Li%C3%A8ge,+Belgique&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen>
+              </iframe>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ============================================================
+         PAGE 2 : CONTACT
+         ============================================================ -->
+    <main id="view-contact" class="page-view" role="main" aria-hidden="true">
+      <div class="container">
+        
+        <div class="contact-page-header">
+          <a href="#accueil" onclick="navigateTo('accueil'); return false;" style="display: inline-flex; align-items: center; gap: 8px; color: var(--color-accent-blue); font-weight: 700; font-size: 15px; margin-bottom: 16px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+            <span>Retour à l'accueil</span>
+          </a>
+          <h1 class="section-title">Contactez-nous</h1>
+          <p class="section-desc">
+            Besoin d'un dépannage urgent, d'un entretien ou d'un devis pour votre installation de chauffage ou sanitaire à Liège ? Nous sommes à votre service.
+          </p>
+        </div>
+
+        <div class="contact-page-grid">
+          
+          <!-- Formulaire de Contact -->
+          <div class="contact-form-card">
+            <h2 class="form-title">Envoyez-nous un message</h2>
+            <p class="form-subtitle">
+              Remplissez les informations ci-dessous. Le formulaire s'ouvrira directement dans votre client e-mail pré-rempli.
+            </p>
+
+            <div id="contact-success" class="form-feedback">
+              Votre message a été préparé avec succès ! Votre client de messagerie vient de s'ouvrir pour finaliser l'envoi vers <strong>etablissement.dubois@gmail.com</strong>.
+            </div>
+
+            <form id="contact-form" onsubmit="handleContactSubmit(event)" novalidate>
+              
+              <!-- Nom -->
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nom et prénom *</label>
+                <input 
+                  type="text" 
+                  id="contact-name" 
+                  name="name" 
+                  class="form-input" 
+                  placeholder="Ex : Jean Dupont" 
+                  required 
+                />
+                <div id="err-name" class="form-error">Veuillez indiquer votre nom.</div>
+              </div>
+
+              <!-- Téléphone -->
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Numéro de téléphone *</label>
+                <input 
+                  type="tel" 
+                  id="contact-phone" 
+                  name="phone" 
+                  class="form-input" 
+                  placeholder="Ex : 04 343 25 59 ou 0470 12 34 56" 
+                  required 
+                />
+                <div id="err-phone" class="form-error">Veuillez renseigner un numéro de téléphone valide.</div>
+              </div>
+
+              <!-- E-mail -->
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Adresse e-mail *</label>
+                <input 
+                  type="email" 
+                  id="contact-email" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="Ex : jean.dupont@email.be" 
+                  required 
+                />
+                <div id="err-email" class="form-error">Veuillez indiquer une adresse e-mail valide.</div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Votre message *</label>
+                <textarea 
+                  id="contact-message" 
+                  name="message" 
+                  class="form-textarea" 
+                  placeholder="Décrivez votre besoin (ex : panne de chaudière, entretien annuel, demande de devis)..." 
+                  required
+                ></textarea>
+                <div id="err-message" class="form-error">Veuillez saisir votre message.</div>
+              </div>
+
+              <!-- Bouton d'envoi -->
+              <button type="submit" class="btn-hero-blue" style="width: 100%; font-size: 17px; margin-top: 8px;">
+                <span>Envoyer</span>
+                <span class="btn-hero-arrow-circle" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                </span>
+              </button>
+
+            </form>
+          </div>
+
+          <!-- Coordonnées & Appel d'urgence -->
+          <div class="contact-side-card">
+            <div>
+              <h2 style="font-size: 20px; font-weight: 800; color: #ffffff; margin-bottom: 12px;">Appel direct &amp; Urgences</h2>
+              <p style="font-size: 15px; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">
+                En cas de panne urgente ou de fuite, privilégiez toujours le contact téléphonique pour une intervention rapide.
+              </p>
+              <a href="tel:+3243432559" class="btn-hero-red btn-red-pulse" style="width: 100%;" aria-label="Appeler le 04 343 25 59">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <span>04 343 25 59</span>
+              </a>
+            </div>
+
+            <div style="border-top: 1px solid var(--color-card-border); padding-top: 20px;">
+              <h3 style="font-size: 16px; font-weight: 800; color: #ffffff; margin-bottom: 12px;">Nos coordonnées</h3>
+              
+              <div style="display: flex; flex-direction: column; gap: 14px; font-size: 15px; color: #cbd5e1;">
+                <div>
+                  <strong style="color: #ffffff; display: block;">Adresse :</strong>
+                  Rue de Mulhouse 8-10, 4020 Liège, Belgique
+                </div>
+                <div>
+                  <strong style="color: #ffffff; display: block;">E-mail :</strong>
+                  <a href="mailto:etablissement.dubois@gmail.com" style="color: var(--color-accent-blue);">etablissement.dubois@gmail.com</a>
+                </div>
+                <div>
+                  <strong style="color: #ffffff; display: block;">Horaires :</strong>
+                  Lundi au vendredi : 08h00–16h30<br />
+                  <span style="color: var(--color-text-muted);">Fermé le week-end</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mini carte dans la page contact -->
+            <div style="border-radius: var(--radius-md); overflow: hidden; height: 200px; border: 1px solid var(--color-card-border); margin-top: 4px;">
+              <iframe 
+                style="width: 100%; height: 100%; border: 0;"
+                title="Carte Google Maps Ets Dubois Liège"
+                src="https://maps.google.com/maps?q=Rue+de+Mulhouse+8-10,+4020+Li%C3%A8ge,+Belgique&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed"
+                loading="lazy">
+              </iframe>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- ============================================================
+         PIED DE PAGE (FOOTER)
+         ============================================================ -->
+    <footer class="site-footer" role="contentinfo">
+      <div class="container">
+        <div class="footer-grid">
+          
+          <!-- Bloc 1 : Identité -->
+          <div class="footer-brand">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+              <img 
+                src="./assets/aistudio/Logo_Version_finale_1200_89468336.png" 
+                alt="Logo Ets Dubois" 
+                style="height: 42px; width: auto;"
+              />
+            </div>
+            <p style="color: #e2e8f0; font-weight: 700; font-size: 16px;">
+              Ets Dubois – Chauffage - Sanitaire
+            </p>
+            <p style="font-size: 14px; line-height: 1.5; color: var(--color-text-muted);">
+              Plus de 20 ans d'expérience au service de votre confort thermique et sanitaire à Liège et environs.
+            </p>
+          </div>
+
+          <!-- Bloc 2 : Coordonnées -->
+          <div>
+            <div class="footer-title">Coordonnées</div>
+            <ul class="footer-links">
+              <li>Rue de Mulhouse 8-10, 4020 Liège, Belgique</li>
+              <li>
+                Téléphone : <a href="tel:+3243432559" class="footer-link" style="color: #ffffff; font-weight: 700;">+32 4 343 25 59</a>
+              </li>
+              <li>
+                E-mail : <a href="mailto:etablissement.dubois@gmail.com" class="footer-link">etablissement.dubois@gmail.com</a>
+              </li>
+              <li>Horaires : Lun - Ven 08h00–16h30</li>
+              <li style="color: var(--color-text-subtle);">Fermé le week-end</li>
+            </ul>
+          </div>
+
+          <!-- Bloc 3 : Liens & Navigation -->
+          <div>
+            <div class="footer-title">Navigation</div>
+            <ul class="footer-links">
+              <li><a href="#accueil" class="footer-link" onclick="navigateTo('accueil'); return false;">Accueil</a></li>
+              <li><a href="#contact" class="footer-link" onclick="navigateTo('contact'); return false;">Contact</a></li>
+              <li><a href="#services" class="footer-link" onclick="navigateTo('accueil'); scrollToSection('services'); return false;">Nos Services</a></li>
+              <li><a href="#galerie" class="footer-link" onclick="navigateTo('accueil'); scrollToSection('galerie'); return false;">Galerie Photos</a></li>
+              <li>
+                <a href="tel:+3243432559" class="footer-link" style="color: var(--color-call-red); font-weight: 700;">
+                  Appeler en cas d'urgence
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            &copy; <span id="year-label">2026</span> Ets Dubois – Chauffage - Sanitaire. Tous droits réservés.
+          </div>
+          <!-- Mention légale obligatoire demandée explicitement par l'utilisateur -->
+          <div class="footer-credit">
+            Maquette de démonstration réalisée par Zenin Digital. Photos d'illustration.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================
+         BOUTON MOBILE FLOTTANT ROUGE « APPELER » (TOUJOURS VISIBLE)
+         ============================================================ -->
+    <aside class="mobile-sticky-bar" aria-label="Action d'appel immédiat mobile">
+      <a href="tel:+3243432559" class="mobile-call-btn" id="sticky-call-btn">
+        <svg class="phone-icon-animated" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Appeler le 04 343 25 59</span>
+      </a>
+    </aside>
+
+    <!-- ============================================================
+         MODAL LIGHTBOX POUR LA GALERIE
+         ============================================================ -->
+    <div id="lightbox" class="lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true" onclick="closeLightbox(event)">
+      <div class="lightbox-inner" onclick="event.stopPropagation()">
+        <img id="lightbox-img" src="" alt="Agrandissement de la réalisation Ets Dubois" class="lightbox-image" />
+        <div class="lightbox-caption-bar">
+          <span id="lightbox-caption" style="font-weight: 700; font-size: 15px; color: #fff;"></span>
+          <button type="button" class="lightbox-close-btn" aria-label="Fermer la vue agrandie" onclick="closeLightbox()">&times;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
+         JAVASCRIPT INTÉGRÉ SANS FRAMEWORK (ROUTAGE 2 PAGES, MENU, VALIDATION)
+         ============================================================ -->
+    <script>
+      // GESTION DU ROUTAGE ENTRE PAGE ACCUEIL ET PAGE CONTACT
+      function navigateTo(pageId) {
+        var viewAccueil = document.getElementById('view-accueil');
+        var viewContact = document.getElementById('view-contact');
+        
+        var navDeskAccueil = document.getElementById('nav-desktop-accueil');
+        var navDeskContact = document.getElementById('nav-desktop-contact');
+        var navBarAccueil = document.getElementById('nav-bar-accueil');
+        var navBarContact = document.getElementById('nav-bar-contact');
+        
+        var navMobAccueil = document.getElementById('nav-mobile-accueil');
+        var navMobContact = document.getElementById('nav-mobile-contact');
+
+        if (pageId === 'contact') {
+          viewAccueil.classList.remove('active-view');
+          viewAccueil.setAttribute('aria-hidden', 'true');
+          
+          viewContact.classList.add('active-view');
+          viewContact.removeAttribute('aria-hidden');
+
+          if (navDeskAccueil) {
+            navDeskAccueil.classList.add('inactive');
+            if (navBarAccueil) navBarAccueil.style.display = 'none';
+          }
+          if (navDeskContact) {
+            navDeskContact.classList.remove('inactive');
+            if (navBarContact) navBarContact.style.display = 'block';
+          }
+          if (navMobAccueil) navMobAccueil.classList.remove('active');
+          if (navMobContact) navMobContact.classList.add('active');
+
+          window.location.hash = 'contact';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          viewContact.classList.remove('active-view');
+          viewContact.setAttribute('aria-hidden', 'true');
+          
+          viewAccueil.classList.add('active-view');
+          viewAccueil.removeAttribute('aria-hidden');
+
+          if (navDeskAccueil) {
+            navDeskAccueil.classList.remove('inactive');
+            if (navBarAccueil) navBarAccueil.style.display = 'block';
+          }
+          if (navDeskContact) {
+            navDeskContact.classList.add('inactive');
+            if (navBarContact) navBarContact.style.display = 'none';
+          }
+          if (navMobAccueil) navMobAccueil.classList.add('active');
+          if (navMobContact) navMobContact.classList.remove('active');
+
+          window.location.hash = 'accueil';
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+      }
+
+      // DÉFILEMENT VERS SECTION
+      function scrollToSection(sectionId) {
+        setTimeout(function() {
+          var el = document.getElementById(sectionId);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth' });
+          }
+        }, 80);
+      }
+
+      // INITIALISATION SELON LE HASH D'URL
+      window.addEventListener('DOMContentLoaded', function() {
+        var hash = window.location.hash.replace('#', '');
+        if (hash === 'contact') {
+          navigateTo('contact');
+        } else {
+          navigateTo('accueil');
+        }
+
+        // Mise à jour automatique de l'année
+        var yearEl = document.getElementById('year-label');
+        if (yearEl) {
+          yearEl.textContent = new Date().getFullYear();
+        }
+      });
+
+      window.addEventListener('hashchange', function() {
+        var hash = window.location.hash.replace('#', '');
+        if (hash === 'contact') {
+          navigateTo('contact');
+        } else if (hash === 'accueil' || hash === '') {
+          navigateTo('accueil');
+        }
+      });
+
+      // MENU BURGER MOBILE
+      function toggleMobileMenu(forceState) {
+        var menu = document.getElementById('mobile-menu');
+        var btn = document.getElementById('burger-btn');
+        if (!menu || !btn) return;
+
+        var isOpen = forceState !== undefined ? forceState : !menu.classList.contains('is-open');
+
+        if (isOpen) {
+          menu.classList.add('is-open');
+          btn.classList.add('is-active');
+          btn.setAttribute('aria-expanded', 'true');
+          menu.removeAttribute('aria-hidden');
+        } else {
+          menu.classList.remove('is-open');
+          btn.classList.remove('is-active');
+          btn.setAttribute('aria-expanded', 'false');
+          menu.setAttribute('aria-hidden', 'true');
+        }
+      }
+
+      // GESTION ET VALIDATION DU FORMULAIRE DE CONTACT (MAILTO VERS etablissement.dubois@gmail.com)
+      function handleContactSubmit(event) {
+        event.preventDefault();
+
+        var nameInput = document.getElementById('contact-name');
+        var phoneInput = document.getElementById('contact-phone');
+        var emailInput = document.getElementById('contact-email');
+        var messageInput = document.getElementById('contact-message');
+
+        var errName = document.getElementById('err-name');
+        var errPhone = document.getElementById('err-phone');
+        var errEmail = document.getElementById('err-email');
+        var errMessage = document.getElementById('err-message');
+        var successBox = document.getElementById('contact-success');
+
+        var isValid = true;
+
+        // Validation Nom
+        if (!nameInput.value.trim()) {
+          errName.style.display = 'block';
+          nameInput.style.borderColor = '#ef4444';
+          isValid = false;
+        } else {
+          errName.style.display = 'none';
+          nameInput.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+        }
+
+        // Validation Téléphone
+        var phoneVal = phoneInput.value.trim();
+        var phoneClean = phoneVal.replace(/[\s\.\-\/\(\)]/g, '');
+        if (!phoneVal || phoneClean.length < 8) {
+          errPhone.style.display = 'block';
+          phoneInput.style.borderColor = '#ef4444';
+          isValid = false;
+        } else {
+          errPhone.style.display = 'none';
+          phoneInput.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+        }
+
+        // Validation E-mail
+        var emailVal = emailInput.value.trim();
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailVal || !emailRegex.test(emailVal)) {
+          errEmail.style.display = 'block';
+          emailInput.style.borderColor = '#ef4444';
+          isValid = false;
+        } else {
+          errEmail.style.display = 'none';
+          emailInput.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+        }
+
+        // Validation Message
+        if (!messageInput.value.trim()) {
+          errMessage.style.display = 'block';
+          messageInput.style.borderColor = '#ef4444';
+          isValid = false;
+        } else {
+          errMessage.style.display = 'none';
+          messageInput.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+        }
+
+        if (!isValid) return;
+
+        // Construction du mailto propre
+        var recipient = 'etablissement.dubois@gmail.com';
+        var subject = 'Demande de contact - Ets Dubois Chauffage Sanitaire';
+        var body = 'Bonjour,\n\n' +
+                   'Nom : ' + nameInput.value.trim() + '\n' +
+                   'Téléphone : ' + phoneInput.value.trim() + '\n' +
+                   'E-mail : ' + emailInput.value.trim() + '\n\n' +
+                   'Message :\n' + messageInput.value.trim() + '\n\n' +
+                   '---\nMessage envoyé depuis le site de démonstration Ets Dubois';
+
+        var mailtoUrl = 'mailto:' + encodeURIComponent(recipient) + 
+                        '?subject=' + encodeURIComponent(subject) + 
+                        '&body=' + encodeURIComponent(body);
+
+        // Affichage confirmation dans l'interface
+        if (successBox) {
+          successBox.classList.add('success');
+          successBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Déclenchement du client mail
+        window.location.href = mailtoUrl;
+      }
+
+      // LIGHTBOX GALERIE PHOTO
+      function openLightbox(src, caption) {
+        var modal = document.getElementById('lightbox');
+        var img = document.getElementById('lightbox-img');
+        var cap = document.getElementById('lightbox-caption');
+
+        if (!modal || !img) return;
+
+        img.src = src;
+        img.alt = caption || 'Photo Ets Dubois';
+        if (cap) cap.textContent = caption || '';
+
+        modal.classList.add('is-open');
+        modal.removeAttribute('aria-hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeLightbox(event) {
+        var modal = document.getElementById('lightbox');
+        if (!modal) return;
+
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Fermeture lightbox via touche Échap
+      window.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          closeLightbox();
+          toggleMobileMenu(false);
+        }
+      });
+    </script>
+
+  </body>
+</html>

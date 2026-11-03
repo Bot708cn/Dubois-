@@ -1,0 +1,6 @@
+{
+  "name": "Ets Dubois – Chauffage & Sanitaire",
+  "description": "Site web de démonstration pour Ets Dubois – Chauffage & Sanitaire à Liège. Spécialistes en installation, dépannage et entretien.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
